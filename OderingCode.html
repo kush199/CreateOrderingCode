@@ -3,8 +3,117 @@
     <title>
         Ordering Code Generation
     </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
 </head>
 <body>
+    <div class="row">
+        <div class="col-sm-3 col-lg-3">
+            <label>Type</label>
+        </div>
 
+        <div class="col-sm-3 col-lg-3">
+            <select id="Type" onchange="TypeChange()">
+                <option id="1">QFFN</option>
+                <option id="2">QFFO</option>
+                <option id="3">QFFP</option>
+                <option id="4">QFFQ</option>
+                <option id="5">QFFR</option>
+                <option id="6">QFFS</option>
+            </select>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <label>Finned Width,mm</label>
+        </div>
+        <div>
+            <input type="text" onchange="FinnedWidthChange" />
+
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-sm-3 col-lg-3">
+            <label>Finned Height,mm</label>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <select id="leave" onchange="FinnedHeightChange">
+                <option id="7">200</option>
+                <option id="8">300</option>
+                <option id="9">400</option>
+                <option id="10">500</option>
+                <option id="11">600</option>
+                <option id="12">700</option>
+            </select>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <label>No Of Tube Rows</label>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <select id="leave" onchange="NoTubeChangeChange">
+                <option id="13">4</option>
+                <option id="14">6</option>
+                <option id="15">8</option>
+                <option id="16">10</option>
+                <option id="17">12</option>
+                <option id="18">14</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+
+
+        <div class="col-sm-3 col-lg-3">
+            <label>Fin Pitch</label>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <select id="leave" onchange="FinPitchChange">
+                <option id="19">1.8</option>
+                <option id="20">3</option>
+                <option id="21">4</option>
+                <option id="22">5</option>
+                <option id="23">6</option>
+                <option id="24">7</option>
+            </select>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <label>No Of Water Passes</label>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <select id="leave" onchange="NoOfWaterPassesChange">
+                <option id="25">4</option>
+                <option id="26">6</option>
+                <option id="27">8</option>
+                <option id="28">10</option>
+                <option id="29">12</option>
+                <option id="30">14</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-lg-3">
+            <label>Connection Side</label>
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <select id="leave" onchange="ConnectionSideChange">
+                <option value="1">Right</option>
+                <option value="2">Left</option>
+                <option value="3">Undefined</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-lg-3">
+            <label>Ordering Code</label>
+
+        </div>
+        <div class="col-sm-3 col-lg-3">
+            <input type="text" id="OrderingCodeId"  value=""/>
+        </div>
+    </div>
+   <script src="MainJS.js"></script>
 </body>
 </html>
