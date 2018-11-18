@@ -15,7 +15,8 @@
         </div>
 
         <div class="col-sm-3 col-lg-3">
-            <select id="Type" onchange="TypeChange()">
+            <select id="Type" onchange="TypeChange(this.value)" value="">
+                <option disabled selected value="" style="display:none"></option>
                 <option id="1">QFFN</option>
                 <option id="2">QFFO</option>
                 <option id="3">QFFP</option>
@@ -28,7 +29,7 @@
             <label>Finned Width,mm</label>
         </div>
         <div>
-            <input type="text" onchange="FinnedWidthChange" />
+            <input type="text" id="FinnedWidth"  value=""  onchange="FinnedWidthChange(this.value)"/>
 
         </div>
     </div>
@@ -39,7 +40,8 @@
             <label>Finned Height,mm</label>
         </div>
         <div class="col-sm-3 col-lg-3">
-            <select id="leave" onchange="FinnedHeightChange">
+            <select id="FinnedHeight" onchange="FinnedHeightChange(this.value)">
+                <option disabled selected value="" style="display:none"></option>
                 <option id="7">200</option>
                 <option id="8">300</option>
                 <option id="9">400</option>
@@ -52,7 +54,8 @@
             <label>No Of Tube Rows</label>
         </div>
         <div class="col-sm-3 col-lg-3">
-            <select id="leave" onchange="NoTubeChangeChange">
+            <select id="TubeRows" onchange="NoTubeChangeChange(this.value)">
+                <option disabled selected value="" style="display:none"></option>
                 <option id="13">4</option>
                 <option id="14">6</option>
                 <option id="15">8</option>
@@ -69,7 +72,8 @@
             <label>Fin Pitch</label>
         </div>
         <div class="col-sm-3 col-lg-3">
-            <select id="leave" onchange="FinPitchChange">
+            <select id="FinPitch" onchange="FinPitchChange(this.value)">
+                <option disabled selected value="" style="display:none"></option>
                 <option id="19">1.8</option>
                 <option id="20">3</option>
                 <option id="21">4</option>
@@ -82,7 +86,8 @@
             <label>No Of Water Passes</label>
         </div>
         <div class="col-sm-3 col-lg-3">
-            <select id="leave" onchange="NoOfWaterPassesChange">
+            <select id="WaterPasses" onchange="NoOfWaterPassesChange(this.value)">
+                <option disabled selected value="" style="display:none"></option>
                 <option id="25">4</option>
                 <option id="26">6</option>
                 <option id="27">8</option>
@@ -97,7 +102,8 @@
             <label>Connection Side</label>
         </div>
         <div class="col-sm-3 col-lg-3">
-            <select id="leave" onchange="ConnectionSideChange">
+            <select id="ConnectionSide" onchange="ConnectionSideChange(this.value)">
+                <option disabled selected value="" style="display:none"></option>
                 <option value="1">Right</option>
                 <option value="2">Left</option>
                 <option value="3">Undefined</option>
