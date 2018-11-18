@@ -1,79 +1,60 @@
 ﻿
+var type;
+var FinnedWidth;
+var FinnedHeight;
+var NoOfTubeChange;
+var FinPitch;
+var WaterPasses;
+var ConnectionSide;
+var pattern = type + "-" + FinnedWidth + "-" + FinnedHeight + "-" + NoOfTubeChange + "-" + FinPitch + "-" + WaterPasses + "-" + ConnectionSide;
 function TypeChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", val)
-	pattern = pattern.replace("#2","_")
-	pattern = pattern.replace("#3", "_")
-	pattern = pattern.replace("#4", "_")
-	pattern = pattern.replace("#5", "_")
-	pattern = pattern.replace("#6", "_")
-	pattern = pattern.replace("#7", "_")
+
+	document.getElementById("FinnedHeight").value = "";
+	document.getElementById("TubeRows").value = "";
+	document.getElementById("FinnedWidth").value = "";
+	document.getElementById("FinPitch").value = "";
+	document.getElementById("WaterPasses").value = "";
+	document.getElementById("ConnectionSide").value = "";
+	
+	type = val;
+	FinnedWidth = "_";
+	FinnedHeight = "_";
+	NoOfTubeChange = "_";
+	FinPitch = "_";
+	WaterPasses = "_";
+	ConnectionSide = "_";
+	pattern = type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
+
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 function FinnedWidthChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", val)
-	pattern = pattern.replace("#3", "_")
-	pattern = pattern.replace("#4", "_")
-	pattern = pattern.replace("#5", "_")
-	pattern = pattern.replace("#6", "_")
-	pattern = pattern.replace("#7", "_")
+	FinnedWidth = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 function FinnedHeightChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", document.getElementById("FinnedWidth").value)
-	pattern = pattern.replace("#3", val)
-	pattern = pattern.replace("#4", "_")
-	pattern = pattern.replace("#5", "_")
-	pattern = pattern.replace("#6", "_")
-	pattern = pattern.replace("#7", "_")
+	FinnedHeight = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 function NoTubeChangeChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", document.getElementById("FinnedWidth").value)
-	pattern = pattern.replace("#3", document.getElementById("FinnedHeight").value)
-	pattern = pattern.replace("#4", val)
-	pattern = pattern.replace("#5", "_")
-	pattern = pattern.replace("#6", "_")
-	pattern = pattern.replace("#7", "_")
+	NoOfTubeChange = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 function FinPitchChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", document.getElementById("FinnedWidth").value)
-	pattern = pattern.replace("#3", document.getElementById("FinnedHeight").value)
-	pattern = pattern.replace("#4", document.getElementById("TubeRows").value)
-	pattern = pattern.replace("#5", val)
-	pattern = pattern.replace("#6", "_")
-	pattern = pattern.replace("#7", "_")
+	FinPitch = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 function NoOfWaterPassesChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", document.getElementById("FinnedWidth").value)
-	pattern = pattern.replace("#3", document.getElementById("FinnedHeight").value)
-	pattern = pattern.replace("#4", document.getElementById("TubeRows").value)
-	pattern = pattern.replace("#5", document.getElementById("FinPitch").value)
-	pattern = pattern.replace("#6", val)
-	pattern = pattern.replace("#7", "_")
+	WaterPasses = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
 
 function ConnectionSideChange(val) {
-	var pattern = "#1-#2-#3-#4-#5-#6-#7";
-	pattern = pattern.replace("#1", document.getElementById("Type").value)
-	pattern = pattern.replace("#2", document.getElementById("FinnedWidth").value)
-	pattern = pattern.replace("#3", document.getElementById("FinnedHeight").value)
-	pattern = pattern.replace("#4", document.getElementById("TubeRows").value)
-	pattern = pattern.replace("#5", document.getElementById("FinPitch").value)
-	pattern = pattern.replace("#6", document.getElementById("WaterPasses").value)
-	pattern = pattern.replace("#7", val)
+	ConnectionSide = val;
+	pattern = this.type + "-" + this.FinnedWidth + "-" + this.FinnedHeight + "-" + this.NoOfTubeChange + "-" + this.FinPitch + "-" + this.WaterPasses + "-" + this.ConnectionSide;
 	document.getElementById("OrderingCodeId").value = pattern;
 }
